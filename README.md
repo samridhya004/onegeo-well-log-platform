@@ -155,16 +155,20 @@ cd onegeo-well-log-platform
 ```
 # 2. PostgreSQL Setup
 
-Create a database named:
+Ensure PostgreSQL is installed and running.
 
-```bash
-onegeo
-```
+Create a database named `onegeo`.
 
-Example (psql):
+Example using psql:
 
 ```bash
 CREATE DATABASE onegeo;
+```
+
+Verify connection:
+
+```bash
+psql -U your_username -d onegeo
 ```
 
 # 3. Backend Setup
@@ -214,7 +218,9 @@ AWS_SECRET_ACCESS_KEY=YOUR_SECRET
 AWS_REGION=ap-south-1
 S3_BUCKET_NAME=your-bucket-name
 ```
-Replace placeholders with your local configuration.
+Note: This repository does not include any credentials. 
+All secrets (database credentials, AWS keys) must be configured locally via environment variables.
+
 
 ## Run Backend Server
 
@@ -271,6 +277,17 @@ http://localhost:5173
     - Interactive plot
     - Statistical summary
     - AI interpretation
+
+# Demo Video
+
+A demo video showcasing:
+- LAS upload
+- Curve visualization
+- Statistical analysis
+- AI interpretation
+- System architecture overview
+
+(Link)
 
 ## Performance Notes
 
