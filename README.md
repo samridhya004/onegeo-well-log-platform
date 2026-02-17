@@ -90,7 +90,7 @@ The system remains deterministic, explainable, and extensible.
 
 ---
 
-# Design Decisions
+## Design Decisions
 
 - **PostgreSQL** chosen for structured relational storage and indexed depth queries.
 - **AWS S3** used for raw LAS archival storage.
@@ -100,7 +100,7 @@ The system remains deterministic, explainable, and extensible.
 
 ---
 
-# Prerequisites
+## Prerequisites
 
 - Python 3.10+
 - Node.js 18+
@@ -109,7 +109,7 @@ The system remains deterministic, explainable, and extensible.
 
 ---
 
-# AWS Setup (Production Mode Only)
+## AWS Setup (Production Mode Only)
 
 1. Create S3 bucket
 2. Create IAM user with S3 access
@@ -118,7 +118,7 @@ The system remains deterministic, explainable, and extensible.
 
 ---
 
-# Quick Start (No AWS Required)
+## Quick Start (No AWS Required)
 
 The application can be run locally without configuring AWS S3.
 
@@ -136,24 +136,22 @@ Note: AWS S3 integration is included for production-grade raw file storage, but 
 
 # Full Setup Instructions
 
----
+## 1. Clone Repository
 
-# 1. Clone Repository
-
-## Mac / Linux
+#### Mac / Linux
 
 ```bash
 git clone https://github.com/samridhya004/onegeo-well-log-platform.git
 cd onegeo-well-log-platform
 ```
 
-## Windows (PowerShell)
+#### Windows (PowerShell)
 
 ```bash
 git clone https://github.com/samridhya004/onegeo-well-log-platform.git
 cd onegeo-well-log-platform
 ```
-# 2. PostgreSQL Setup
+## 2. PostgreSQL Setup
 
 Ensure PostgreSQL is installed and running.
 
@@ -171,7 +169,7 @@ Verify connection:
 psql -U your_username -d onegeo
 ```
 
-# 3. Backend Setup
+## 3. Backend Setup
 
 Navigate to backend:
 
@@ -179,35 +177,31 @@ Navigate to backend:
 cd backend
 ```
 
-## Create Virtual Environment
+### Create Virtual Environment
 
-### Mac / Linux
+#### Mac / Linux
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Windows
+#### Windows
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Create .env File
+### Create .env File
 
-Inside backend/, create:
-
-```bash
-.env
-```
+Inside backend/, create `.env`
 
 Add:
 
@@ -222,7 +216,7 @@ Note: This repository does not include any credentials.
 All secrets (database credentials, AWS keys) must be configured locally via environment variables.
 
 
-## Run Backend Server
+### Run Backend Server
 
 ```bash
 uvicorn app.main:app --reload
@@ -240,7 +234,7 @@ Swagger Docs:
 http://127.0.0.1:8000/docs
 ```
 
-# 4. Frontend Setup
+## 4. Frontend Setup
 
 Navigate to frontend:
 
@@ -248,13 +242,13 @@ Navigate to frontend:
 cd ../frontend
 ```
 
-Install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Start development server:
+### Start development server
 
 ```bash
 npm run dev
@@ -278,7 +272,7 @@ http://localhost:5173
     - Statistical summary
     - AI interpretation
 
-# Demo Video
+## Demo Video
 
 A demo video showcasing:
 - LAS upload
